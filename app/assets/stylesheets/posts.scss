@@ -3,9 +3,13 @@
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
 .navbar-brand {
+  color: red;
+}
+
+.navbar-brand:hover {
   color: white;
 }
 
 a:hover {
-  color: #F7F7F7 !important;
+  color: red !important;
 }

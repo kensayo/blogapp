@@ -22,19 +22,19 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <%= link_to "Home", home_path %>
+            <%= link_to "Home", home_path, class: "nav-link fs-5 text-light"%>
           </li>
-        </ul>
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0 navbar-right">
           <li class="nav-item">
-            <%= link_to "Create a post", new_post_path %>
+            <%= link_to "Create a post", new_post_path, class: "nav-link fs-5 text-light"%>
           </li>
         </ul>
       </div>
     </div>
   </nav>
 
-    <%= yield %>
+    <div class="container py-3">
+      <%= yield %>
+    </div>
   </div>
   </body>
 </html>
