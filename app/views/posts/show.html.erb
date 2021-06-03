@@ -1,2 +1,7 @@
-<h2><%= @post.title %></h2>
+<div class="d-flex justify-content-between flex-row align-items-center">
+<h1><%= @post.title %></h1>
+  <%= link_to edit_post_path(@post), class: 'btn btn-danger' do %>
+    <i class="fa fa-edit"></i>
+  <% end %>
+</div>
 <p><%= @post.body %></p>
