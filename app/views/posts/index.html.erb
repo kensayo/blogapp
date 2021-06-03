@@ -1,0 +1,10 @@
+<h1>Blog App Posts</h1>
+<% @post.each do |post| %>
+  <div class="card my-2">
+    <div class="card-body">
+      <h3><%= post.title %></h3>
+      <p> <%= truncate(post.body, length: 150, omission: '...') %></p>
+      <%= link_to "Read mode", post_path(post), class: "btn btn-danger stretched-link" %>
+    </div>
+  </div>
+<% end %>

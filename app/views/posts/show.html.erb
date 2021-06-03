@@ -1,0 +1,14 @@
+<div class="d-flex justify-content-between flex-row align-items-center">
+<h1><%= @post.title %></h1>
+  <div>
+    <%= link_to edit_post_path(@post), class: 'btn btn-danger' do %>
+      <i class="fa fa-edit"></i>
+    <% end %>
+    <%= link_to post_path(@post), method: :delete,
+                data: { confirm: "Are you sure?" },
+                class: 'btn btn-danger' do %>
+      <i class="fa fa-trash"></i>
+    <% end %>
+  </div>
+</div>
+<p><%= @post.body %></p>
