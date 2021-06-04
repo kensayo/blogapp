@@ -1,5 +1,4 @@
 <div class="d-flex justify-content-between flex-row align-items-center">
-<h1><%= @post.title %></h1>
   <div>
     <%= link_to edit_post_path(@post), class: 'btn btn-danger' do %>
       <i class="fa fa-edit"></i>
@@ -12,3 +11,30 @@
   </div>
 </div>
 <p><%= @post.body %></p>
+<span class="fs-6 text-danger float-end">Posted: <%= @post.created_at.to_s.split(" ")[0] %></span>
+<h3 class="text-danger fw-bold mt-5">Comments</h3>
+<%= "No comments, be the first on comment in this post" if @post.comments.blank? %>
+<% @post.comments.each do |comment| %>
+  <div class="well">
+    <p><strong><%= comment.username %></strong>: <%= comment.body %></p>
+  </div>
+<% end %>
+
+<div class="card my-5">
+  <div class="card-header fs-4 fw-bold text-danger">Add Comment</div>
+  <div class="card-body">
+    <%= form_for([@post, @post.comments.build]) do |f| %>
+    <p>
+      <%= f.label :username %><br>
+      <%= f.text_field(:username, class: 'form-control') %>
+    </p>
+    <p>
+      <%= f.label 'Comment' %><br>
+      <%= f.text_area(:body, class: 'form-control') %>
+    </p>
+    <p>
+      <%= f.submit(class: 'btn btn-danger fw-bold w-100') %>
+    </p>
+    <% end %>
+  </div>
+</div>
