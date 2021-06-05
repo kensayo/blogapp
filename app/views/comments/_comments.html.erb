@@ -1,5 +1,6 @@
 <h3 class="text-danger fw-bold mt-5">Comments</h3>
 <%= "No comments, be the first on comment in this post" if @post.comments.blank? %>
+
 <% i = 0 %>
 <% @post.comments.each do |comment| %>
   <% i += 1 %>
