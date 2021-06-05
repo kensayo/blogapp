@@ -37,11 +37,12 @@ class PostsController < ApplicationController
 
   def destroy
     @post = Post.find(params[:id])
+    results = ActiveRecord::Base.connection.execute("DELETE FROM COMMENTS WHERE post_id = #{params[:id]}")
     @post.destroy
     redirect_to posts_path
   end
 
   private def post_params
-    params.require(:post).permit(:title, :body)
+    params.require(:post).permit(:title, :body, :likes, :dislikes)
   end
 end
