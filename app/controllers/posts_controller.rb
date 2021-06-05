@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 # Posts Controller file
 class PostsController < ApplicationController
   def index
