@@ -1,6 +1,6 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# [Blog App](https://kenny-blogapp.herokuapp.com/)
+# [Blog App](https://kenny-blogapp.herokuapp.com/) <- Live Version
 
 ## This Blog is a project developed as part of the Microverse curriculum, to be more specific, is part of the Ruby on Rails module.
 
