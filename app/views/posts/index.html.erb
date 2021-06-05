@@ -5,7 +5,10 @@
       <p> <%= truncate(post.body, length: 150, omission: '...') %></p>
       <div class="d-flex justify-content-between flex-row align-items-center">
         <%= link_to "Read mode", post_path(post), class: "btn btn-danger stretched-link" %>
-        <div><strong class="text-danger fw-bold ">Comments:</strong> <%= post.comments.all.count %></div>
+        <div>
+          <strong class="text-danger fw-bold ">Comments:</strong>
+          <strong><%= post.comments.all.count %></strong>
+        </div>
       </div>
     </div>
   </div>
