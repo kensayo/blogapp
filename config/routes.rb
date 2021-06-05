@@ -1,6 +1,6 @@
-# frozen_string_literal: true
-
 Rails.application.routes.draw do
   root 'posts#index', as: 'home'
-  resources :posts
+  resources :posts do
+    resources :comments
+  end
 end
